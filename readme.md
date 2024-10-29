@@ -110,20 +110,19 @@ See [Request Examples](#request-examples).
 ```json
 {
   "recipient": {
-    "user_id": "12345",
-    "email": "user@example.com",
+    "user_id": "1",
+    "email": "sb78639@gmail.com",
     "phone_number": "+1234567890",
     "device_token": "device_token_example"
   },
   "message": {
-    "title": "Welcome to Our Service!",
-    "body": "Hello {{name}}, thank you for joining! We're glad to have you.",
-    "template_id": "welcome_template_01",
+    "template_id": "1",
     "placeholders": {
-      "name": "John Doe"
+      "name": "Sumit Kumar",
+      "lname":"B"
     }
   },
-  "priority": "high",
+  "priority": "standard",
   "retry_policy": {
     "max_retries": 3,
     "retry_backoff": "exponential"
@@ -137,6 +136,7 @@ See [Request Examples](#request-examples).
     "scheduled_time": "2024-11-01T10:00:00Z"
   }
 }
+
 ```
 
 ---
