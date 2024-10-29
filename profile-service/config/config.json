@@ -1,0 +1,40 @@
+{
+    "name": "profile-service",
+    "profiles": [
+        "dev"
+    ],
+    "label": "master",
+    "version": "1.0.0",
+    "state": null,
+    "propertySources": [
+        {
+            "source": {
+                "Environment": "dev",
+                "BaseUrl": "http://localhost:8080",
+                "server.port": ":8081",
+                "database.url": "mongodb://%s:%s@%s:27017", 
+                "database.username": "",      
+                "database.password": "",     
+                "database.host": "localhost",             
+                "database.name": "profile-service",
+                "allowedOrigins": "*",
+                "log.file.path": "/var/log/",
+                "log.file.name": "profile-service.log",
+                "log.file.maxsize": 10,
+                "log.file.maxbackup": 5,
+                "log.file.maxage": 30,
+                "log.level": 1,
+                "judge.base.uri": "https://ce.judge0.com",
+                "judge.Batch.uri": "https://ce.judge0.com/submissions/batch?base64_encoded=true&fields=stdout,time,message,status,expected_output,stdin,source_code,language",
+                "X-RapidAPI-Key": "2af2e9d12amsh06e8b822e273dd1p16f999jsnac2b425e463b",
+                "X-RapidAPI-Host": "https://ce.judge0.com",
+                "X-Judge0-Client-ID": "KzgGp2KU3rZNZVLS",
+                "X-Judge0-Client-Secret": "ZXQrgPz6CTvZxEW2J32sE4HyHpFjS7bp",
+                "X-Judge0-Key": "633d3e61-a5dd-484d-ac4c-46d19593830d",
+                "compiler.callback.host": "http://kod-staging-nlb-bde89fcd8b5f0c8c.elb.ap-south-1.amazonaws.com",
+                "MessagingQueueName": "placement-service",
+                "AWS_BASE_URL": "https://staging-api.kodnest.in"
+            }
+        }
+    ]
+}

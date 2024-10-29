@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"       # RabbitMQ main port
+      - "15672:15672"     # RabbitMQ management UI port
+    volumes:
+      - ./rabbitmq-data:/var/lib/rabbitmq  # Persist RabbitMQ data
+      - ./rabbitmq-config:/etc/rabbitmq    # Configuration for deprecation warning
+    environment:
+      RABBITMQ_DEFAULT_USER: admin_user  # Replace guest with a custom user
+      RABBITMQ_DEFAULT_PASS: admin_password  # Replace guest password with a secure one
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - "6379:6379"  # Redis port
